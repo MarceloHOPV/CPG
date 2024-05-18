@@ -13,8 +13,12 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public bool inGround;
 
-    void Start() {
+    [SerializeField] private PlayerAnimation pa;
+
+    void Start() 
+    {
         rb = GetComponent<Rigidbody2D>();
+        pa = GetComponent<PlayerAnimation>();
     }
     void FixedUpdate()
     {
