@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - chao
+<<<<<<< HEAD
+=======
+  - Enemy
+  - Shooter
+>>>>>>> 82ee1ddba0142d1a14e5b76db323d3651061765e
   layers:
   - Default
   - TransparentFX
