@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TelaInicial.unity
+    guid: c0c69b4da34617b4787ddeffe704d896
+  - enabled: 1
+    path: Assets/Scenes/Fase1.unity
+    guid: 85c4e87dff4a4684c8678ac34c4ab115
+  - enabled: 1
+    path: Assets/Scenes/Fase2.unity
+    guid: 8b55ef577737c1543ba0860e33a16267
+  - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: f82ce0d950e9f5d45bef4ba53afab354
   m_configObjects: {}
