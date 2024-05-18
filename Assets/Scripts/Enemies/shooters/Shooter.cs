@@ -8,13 +8,15 @@ public class Shooter : MonoBehaviour
     public Transform firepoint;
 
     // Prefab da bola de canhão
-    public cokeBullet bullet;
+    public Ball bullet;
 
     // Tempo entre cada disparo
     public float timeBetween;
 
     // Tempo inicial entre disparos
     public float StartTimeBetween;
+
+    public ShooterAnimation anim;
 
     //Vida
     public int vida;
@@ -41,20 +43,23 @@ public class Shooter : MonoBehaviour
         // Verifica se o tempo entre disparos chegou a zero
         if (timeBetween <= 0 && !destroyed)
         {
-
+            //anim.PlayAnimation("ShooterAttack");
             // Reinicia o tempo entre disparos
+            NewBall();
             timeBetween = StartTimeBetween;
+            Debug.Log("Atirou");
         }
         else
         {
             // Reduz o tempo entre disparos com base no tempo decorrido
             timeBetween -= Time.deltaTime;
+            Debug.Log("Aguardando");
         }
     }
 
     public void StopAttacking()
     {
-        //anim.PlayAnimation(animation_idle);
+        //anim.PlayAnimation("ShooterIdle");
     }
 
     public void StopbeingAttacked()
@@ -66,7 +71,8 @@ public class Shooter : MonoBehaviour
     {
 
         // Instancia uma nova bola de canhão no firepoint (posição de lançamento)
-        cokeBullet newBall = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        Ball newBall = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        Debug.Log("Instanciou");
 
         // Verifica a escala do canhão para determinar a direção da bola
         if (transform.localScale.x < 0)

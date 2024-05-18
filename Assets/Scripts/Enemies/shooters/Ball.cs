@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class cokeBullet : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private int damage;
-    [SerializeField] private Shooter shooter;
+    [SerializeField] private Shooter trap;
     [SerializeField] private float time;
-    //public PlayerHealth player;
 
     private void Start()
     {
         //player = FindObjectOfType<PlayerHealth>();
-        shooter = FindObjectOfType<Shooter>();
+        trap = FindObjectOfType<Shooter>();
 
         // Verifica a escala do canhão para determinar a direção da bola
-        if (shooter.transform.localScale.x < 0)  // Canhão está virado para a direita
+        if (trap.transform.localScale.x < 0)  // Canhão está virado para a direita
         {
             // Acelera a bola para a direita
             rb.velocity = Vector2.right * speed;
