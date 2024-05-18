@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35daa5e16e5c7f4182b5a6adc80d4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atacando: 0
   move: 0
   speed: 8
   rb: {fileID: 0}
@@ -218,7 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b1f052804998f4cb09bebaf6d20a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: {fileID: 5329443323775852108, guid: 838c0cf2bc9921541ba87545a114c328, type: 3}
+  shoot: {fileID: 5343285192569584480, guid: 3b82b0f5958ed16469086e3317b3ae08, type: 3}
+  pa: {fileID: 0}
 --- !u!114 &151783200815301202
 MonoBehaviour:
   m_ObjectHideFlags: 0

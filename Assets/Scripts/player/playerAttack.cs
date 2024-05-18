@@ -6,6 +6,7 @@ public class playerAttack : MonoBehaviour
 {
     public GameObject shoot;
     public PlayerAnimation pa;
+
     private void Awake()
     {
         pa = GetComponent<PlayerAnimation>();
@@ -19,12 +20,14 @@ public class playerAttack : MonoBehaviour
         if(Input.GetKeyDown("e"))
         {
             pa.PlayAnimation("PlayerAtack");
+
             
         }
     }
     void spawnShoot()
     {
         if (transform.eulerAngles.y == 0)
+
             {
                 Instantiate(shoot, new Vector3(transform.position.x+0.6f, transform.position.y,transform.position.z),transform.rotation);
             }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerAtack
+  m_Name: Animato_Bushing
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,21 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1638068391, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - time: 0.2
-      value: {fileID: 1300751168, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - time: 0.4
-      value: {fileID: 1765492128, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - time: 0.6
-      value: {fileID: -1009617205, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - time: 0.8
-      value: {fileID: 2088316935, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
+      value: {fileID: -1681868470, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 5
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,17 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1638068391, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - {fileID: 1300751168, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - {fileID: 1765492128, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - {fileID: -1009617205, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
-    - {fileID: 2088316935, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
+    - {fileID: -1681868470, guid: f76377e8d246fde42bc86acb90e1c152, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -81,29 +69,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-<<<<<<< HEAD
   m_Events: []
-=======
-  m_Events:
-  - time: 0
-    functionName: playerAtack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6
-    functionName: spawnShoot
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.8
-    functionName: playerAtack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
->>>>>>> 82ee1ddba0142d1a14e5b76db323d3651061765e
