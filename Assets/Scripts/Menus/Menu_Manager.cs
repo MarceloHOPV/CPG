@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Menu_Manager : MonoBehaviour
 {
@@ -9,10 +8,7 @@ public class Menu_Manager : MonoBehaviour
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelSettings;
 
-    public void newGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+    
 
     public void openSetings()
     {
