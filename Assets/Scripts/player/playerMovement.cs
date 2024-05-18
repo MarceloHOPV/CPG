@@ -36,12 +36,12 @@ public class playerMovement : MonoBehaviour
         isMoving = true;
 
         // Verifica se o jogador pode se mover
-        if (isMoving && !atacando)
+        if (isMoving)
         {
             SpriteFlip(move);
             rb.velocity = new Vector2(move * speed, rb.velocity.y);
 
-            if (inGround)
+            if (inGround && !atacando)
             {
                 if (move == 0)
                 {
