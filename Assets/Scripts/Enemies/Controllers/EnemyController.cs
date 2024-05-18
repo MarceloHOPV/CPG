@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        // Verifica se o inimigo está vivo antes de permitir movimento
+        // Verifica se o inimigo estï¿½ vivo antes de permitir movimento
         if (vida > 0)
         {
             Move();
@@ -40,13 +40,15 @@ public class EnemyController : MonoBehaviour
         transform.localScale = scale;
     }
 
-    public virtual void attack()
+    public virtual void attack(playerLife player)
     {
         // Evitar que o inimigo ataque se estiver morto
         if (vida <= 0) return;
 
         Debug.Log("atacando");
         attacking = true;
+        //falta animaÃ§Ã£o
+        player.takeDamage(2);
         Invoke("stop_attacking", 0.5f);
         speed = 0;
     }
@@ -59,8 +61,8 @@ public class EnemyController : MonoBehaviour
 
         if (vida <= 0)
         {
-            // Garante que o inimigo seja destruído após a animação de morte
-            Invoke(nameof(destroy), 0.6f); // Ajuste o tempo conforme necessário
+            // Garante que o inimigo seja destruï¿½do apï¿½s a animaï¿½ï¿½o de morte
+            Invoke(nameof(destroy), 0.6f); // Ajuste o tempo conforme necessï¿½rio
         }
     }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    public bool atacando;
+
     [SerializeField] public float move;
     [SerializeField] private float speed = 10;
     public Rigidbody2D rb;
@@ -34,7 +36,7 @@ public class playerMovement : MonoBehaviour
         isMoving = true;
 
         // Verifica se o jogador pode se mover
-        if (isMoving)
+        if (isMoving && !atacando)
         {
             SpriteFlip(move);
             rb.velocity = new Vector2(move * speed, rb.velocity.y);
@@ -53,26 +55,34 @@ public class playerMovement : MonoBehaviour
         }
         else
         {
-            // Se está atacando, define a velocidade do jogador como zero
+            // Se estï¿½ atacando, define a velocidade do jogador como zero
             rb.velocity = new Vector2(0, rb.velocity.y);
             isMoving = false;
         }
     }
 
+    public void playerAtack()
+    {
+        if(!atacando)
+            atacando = true;
+        else
+            atacando = false;
+    }
+    
     void SpriteFlip(float horizontal)
     {
-        // Obtém a escala atual do jogador
+        // Obtï¿½m a escala atual do jogador
         Vector3 playerScale = transform.localScale;
 
         if (horizontal > 0)
         {
             // Define a escala do jogador diretamente
-            transform.localScale = new Vector3(Mathf.Abs(playerScale.x), playerScale.y, playerScale.z);
+            transform.eulerAngles = new Vector3(playerScale.x, 0, playerScale.z);
         }
         else if (horizontal < 0)
         {
-            // Inverte a escala do jogador na direção horizontal
-            transform.localScale = new Vector3(-Mathf.Abs(playerScale.x), playerScale.y, playerScale.z);
+            // Inverte a escala do jogador na direï¿½ï¿½o horizontal
+            transform.eulerAngles = new Vector3(playerScale.x, 180, playerScale.z);
         }
     }
 
@@ -86,7 +96,7 @@ public class playerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0f, Jump*SpeedJump), ForceMode2D.Impulse);
         }
 
-        if (rb.velocity.y > 0 && !inGround)
+        if (rb.velocity.y > 0 && !inGround && !atacando)
         {
             pa.PlayAnimation("PlayerJump");
         }

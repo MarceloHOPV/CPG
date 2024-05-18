@@ -6,6 +6,7 @@ TagManager:
   tags:
   - chao
   - Enemy
+  - Shooter
   layers:
   - Default
   - TransparentFX

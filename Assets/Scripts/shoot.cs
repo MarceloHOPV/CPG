@@ -28,5 +28,15 @@ public class shoot : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if(other.CompareTag("Shooter"))
+        {
+            other.GetComponent<Shooter>().PerdeVida(2);
+            Destroy(gameObject);
+        }
+        else if(other.CompareTag("Enemy"))
+        {
+            other.GetComponent<EnemyController>().perdeVida(2);
+            Destroy(gameObject);
+        }
     }
 }

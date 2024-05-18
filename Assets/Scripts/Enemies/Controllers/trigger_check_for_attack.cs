@@ -14,7 +14,7 @@ public class trigger_check_for_attack : MonoBehaviour
         {
             if (collision.CompareTag("Player") && can_attack)
             {
-                enemy.attack();
+                enemy.attack(collision.GetComponent<playerLife>());
                 can_attack = false;
                 Invoke("cooldown_passed", cooldown);
             }
