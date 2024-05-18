@@ -18,7 +18,7 @@ public class playerAttack : MonoBehaviour
     {
         if(Input.GetKeyDown("e"))
         {
-            pa.PlayAnimation("PlayerAtack");
+            //pa.PlayAnimation("PlayerAtack");
 
             if (transform.eulerAngles.y == 0)
             {
