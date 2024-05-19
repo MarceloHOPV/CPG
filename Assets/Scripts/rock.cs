@@ -14,4 +14,12 @@ public class rock : MonoBehaviour
             rb.velocity = new Vector3(0,-5,3) ;
         }
     }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("boss"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

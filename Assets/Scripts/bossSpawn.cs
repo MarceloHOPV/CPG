@@ -7,6 +7,7 @@ public class bossSpawn : MonoBehaviour
     public int cont;
     GameObject[] spawns;
     GameObject spawn;
+    public GameObject boss;
     void Start()
     {
         cont = 0;
@@ -21,7 +22,7 @@ public class bossSpawn : MonoBehaviour
             {
                 Destroy(spawn);        
             }
-
+            Instantiate(boss, transform.position, Quaternion.identity);
         }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - spawn
   - BossSpawn
   - rock
+  - boss
   layers:
   - Default
   - TransparentFX
