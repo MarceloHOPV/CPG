@@ -6,10 +6,12 @@ public class playerAttack : MonoBehaviour
 {
     public GameObject shoot;
     public PlayerAnimation pa;
+    public bool atacando;
 
     private void Awake()
     {
         pa = GetComponent<PlayerAnimation>();
+        atacando = false;
     }
     void Update()
     {
@@ -17,13 +19,22 @@ public class playerAttack : MonoBehaviour
     }
     void attack()
     {
-        if(Input.GetKeyDown("e"))
+        if(Input.GetKeyDown("e") && !atacando)
         {
             pa.PlayAnimation("PlayerAtack");
 
             
         }
     }
+
+    public void setAttack()
+    {
+        if(!atacando)
+            atacando = true;
+        else if(atacando)
+            atacando = false;
+    }
+
     void spawnShoot()
     {
         if (transform.eulerAngles.y == 0)
