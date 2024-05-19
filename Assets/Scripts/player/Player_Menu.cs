@@ -19,12 +19,14 @@ public class Player_Menu : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator _animator;
     public string _currentState;
+    public AudioSource[] music;
+    //music.Play();
 
     //C#
     private Dialogue_Control dc;
     bool onRadious = false;
     bool alreadSpeaking = false;
-    bool f1 = false, f2 = false, f3 = false, f4 = false, f5 = false, f6 = false;
+    bool f0 = false, f1 = false, f2 = false, f3 = false, f4 = false, f5 = false, f6 = false,f7 = false;
 
     //Const animation
     const string PLAYER_IDLE = "IDLE";
@@ -74,10 +76,21 @@ public class Player_Menu : MonoBehaviour
                 case 0:
                     profile = profileVo;
                     actorName = vovoName;
+                    if (!f0)
+                    {
+                        dc.changeCharacter(profile, actorName);
+                        f0 = true;
+                    }
                 break;
                 case 1:
                     Debug.Log("1");
-                    break;
+                    if (!f1)
+                    {
+                        dc.changeCharacter(profile, actorName);
+                        f1 = true;
+                        music[1].Play();
+                    }
+                break;
                 case 2:
                     Debug.Log("2");
                     profile = profileJunin;
@@ -86,7 +99,7 @@ public class Player_Menu : MonoBehaviour
                 {
                     dc.changeCharacter(profile, actorName);
                     f2 = true;
-                    Debug.Log("lmao");
+                    music[2].Play();    
                 }
                 break;
                 case 3:
@@ -97,17 +110,18 @@ public class Player_Menu : MonoBehaviour
                 {
                     dc.changeCharacter(profile, actorName);
                     f3 = true;
+                    music[3].Play();
                 }
                 break;
                 case 4:
                     Debug.Log("4");
                     profile = profileJunin;
                     actorName = juninName;
-                    dc.changeCharacter(profile, actorName);
                 if (!f4)
                 {
                     dc.changeCharacter(profile, actorName);
                     f4 = true;
+                    music[4].Play();
                 }
                 break;
                 case 5:
@@ -118,7 +132,24 @@ public class Player_Menu : MonoBehaviour
                 {
                     dc.changeCharacter(profile, actorName);
                     f5 = true;
+                    music[5].Play();
                 }
+                break;
+                case 6:
+                    if (!f6)
+                    {
+                        dc.changeCharacter(profile, actorName);
+                        f6 = true;
+                        music[6].Play();
+                    }
+                break;
+                case 7:
+                    if (!f7)
+                    {
+                        dc.changeCharacter(profile, actorName);
+                        f7 = true;
+                        music[7].Play();
+                    }
                 break;
 
         }
@@ -145,6 +176,7 @@ public class Player_Menu : MonoBehaviour
             dc.deactv();
             dc.speech(profile, speechTxt, actorName);
             alreadSpeaking = true;
+            music[0].Play();
 
         }
         alreadSpeaking = true;
