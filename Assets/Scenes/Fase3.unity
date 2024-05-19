@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 649230841}
   - component: {fileID: 649230840}
   m_Layer: 0
-  m_Name: vecteezy_an-8-bit-retro-styled-pixel-art-illustration-of-a-dark-stone_26547570
+  m_Name: rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
