@@ -164,6 +164,5 @@ MonoBehaviour:
   rb: {fileID: 5109994297107798101}
   speed: 10
   damage: 1
-  trap: {fileID: 0}
   time: 2
   player: {fileID: 0}

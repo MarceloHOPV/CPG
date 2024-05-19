@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    // A posição de onde as bolas de canhão serão lançadas
+    // A posiï¿½ï¿½o de onde as bolas de canhï¿½o serï¿½o lanï¿½adas
     public Transform firepoint;
 
-    // Prefab da bola de canhão
+    // Prefab da bola de canhï¿½o
     public Ball bullet;
 
     // Tempo entre cada disparo
@@ -74,16 +74,10 @@ public class Shooter : MonoBehaviour
     public void NewBall()
     {
 
-        // Instancia uma nova bola de canhão no firepoint (posição de lançamento)
-        Ball newBall = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // Instancia uma nova bola de canhï¿½o no firepoint (posiï¿½ï¿½o de lanï¿½amento)
+        Ball newBall = Instantiate(bullet, transform.position, transform.rotation);
         Debug.Log("Instanciou");
 
-        // Verifica a escala do canhão para determinar a direção da bola
-        if (transform.localScale.x < 0)
-        {
-            // Se o canhão estiver virado para a esquerda, inverte a escala da bola
-            newBall.transform.localScale = new Vector3(-1, 1, 1);
-        }
     }
 
     public void PerdeVida(int dano)

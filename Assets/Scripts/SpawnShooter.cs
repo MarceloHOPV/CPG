@@ -21,6 +21,7 @@ public class SpawnShooter : MonoBehaviour
             if(time<=0)
             {
                 Instantiate(Shooter, transform.position, transform.rotation,transform);   
+                GameObject.FindWithTag("BossSpawn").GetComponent<bossSpawn>().Contador();
                 time = StarTime;
                 Spawn = true;
             }
@@ -29,11 +30,6 @@ public class SpawnShooter : MonoBehaviour
         {
             Spawn = false;
         }
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
         
     }
 

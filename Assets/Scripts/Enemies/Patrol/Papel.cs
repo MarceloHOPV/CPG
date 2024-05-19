@@ -8,6 +8,7 @@ public class Papel : EnemyController
     {
         speedInitial = speed;
         //animator = GetComponent<enemy_animation>();
+        Physics.IgnoreLayerCollision(8, 7);
     }
 
 }

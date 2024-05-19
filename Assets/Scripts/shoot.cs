@@ -38,5 +38,9 @@ public class shoot : MonoBehaviour
             other.GetComponent<EnemyController>().perdeVida(2);
             Destroy(gameObject);
         }
+        else if(other.CompareTag("rock"))
+        {
+            other.GetComponent<rock>().rockCount();
+        }
     }
 }

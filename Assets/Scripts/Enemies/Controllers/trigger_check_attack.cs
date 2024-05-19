@@ -18,6 +18,11 @@ public class trigger_check_attack : MonoBehaviour
                 can_attack = false;
                 Invoke("cooldown_passed", cooldown);
             }
+            if (collision.CompareTag("Player") && can_attack)
+            {
+                can_attack = false;
+                Invoke("cooldown_passed", cooldown);
+            }
         }
     }
 

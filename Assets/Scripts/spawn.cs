@@ -19,11 +19,13 @@ public class spawn : MonoBehaviour
         if(time<=0)
         {
             Instantiate(enemy, transform.position, transform.rotation);   
+            GameObject.FindWithTag("BossSpawn").GetComponent<bossSpawn>().Contador();
             time = StarTime;
         }
 
         
     }
+ 
 
     
 
