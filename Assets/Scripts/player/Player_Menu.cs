@@ -23,7 +23,7 @@ public class Player_Menu : MonoBehaviour
     //music.Play();
 
     //C#
-    private Dialogue_Control dc;
+    private dControl0 dc;
     bool onRadious = false;
     bool alreadSpeaking = false;
     bool f0 = false, f1 = false, f2 = false, f3 = false, f4 = false, f5 = false, f6 = false,f7 = false;
@@ -35,7 +35,7 @@ public class Player_Menu : MonoBehaviour
 
     private void Start()
     {
-        dc = FindAnyObjectByType<Dialogue_Control>();
+        dc = FindAnyObjectByType<dControl0>();
         sprite = GetComponent<SpriteRenderer>();
         _animator = gameObject.GetComponent<Animator>();
     }
@@ -83,7 +83,7 @@ public class Player_Menu : MonoBehaviour
                     }
                 break;
                 case 1:
-                    Debug.Log("1");
+                    
                     if (!f1)
                     {
                         dc.changeCharacter(profile, actorName);
@@ -92,7 +92,7 @@ public class Player_Menu : MonoBehaviour
                     }
                 break;
                 case 2:
-                    Debug.Log("2");
+                    
                     profile = profileJunin;
                     actorName = juninName;
                 if (!f2)
@@ -103,7 +103,7 @@ public class Player_Menu : MonoBehaviour
                 }
                 break;
                 case 3:
-                    Debug.Log("3");
+                    
                     profile = profileVo;
                     actorName = vovoName;
                 if (!f3)
@@ -113,7 +113,7 @@ public class Player_Menu : MonoBehaviour
                     music[3].Play();
                 }
                 break;case 4:
-                    Debug.Log("4");
+                    
                     profile = profileJunin;
                     actorName = juninName;
                 if (!f4)
@@ -124,7 +124,7 @@ public class Player_Menu : MonoBehaviour
                 }
                 break;
                 case 5:
-                    Debug.Log("5");
+                    
                     profile = profileVo;
                     actorName = vovoName;
                 if (!f5)
@@ -135,7 +135,7 @@ public class Player_Menu : MonoBehaviour
                 }
                 break;
                 case 6:
-                    Debug.Log("6");
+                    
                     profile = profileVo;
                     actorName = vovoName;
                 if (!f6)

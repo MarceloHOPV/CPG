@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 533888436}
-  - component: {fileID: 533888435}
+  - component: {fileID: 533888437}
   m_Layer: 0
   m_Name: Dialogue_Control
   m_TagString: Untagged
@@ -968,25 +968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &533888435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533888434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b8f74012b1c95418faedd4a0413aa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueObj: {fileID: 1494610936}
-  profile: {fileID: 481956009}
-  profileJunin: {fileID: 481956009}
-  SpeechText: {fileID: 852831047}
-  actorNameText: {fileID: 218186558}
-  TypingSpeed: 0.05
-  index: 0
 --- !u!4 &533888436
 Transform:
   m_ObjectHideFlags: 0
@@ -1002,6 +983,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533888437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533888434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ce9174dad0a604c9eac87d282b12de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObj: {fileID: 1494610936}
+  profile: {fileID: 481956009}
+  profileJunin: {fileID: 0}
+  SpeechText: {fileID: 852831047}
+  actorNameText: {fileID: 218186558}
+  anda: 0
+  moveSpeed: 0
+  TypingSpeed: 0.05
+  index: 0
 --- !u!1 &567444874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,8 +1168,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 533888435}
-        m_TargetAssemblyTypeName: Dialogue_Control, Assembly-CSharp
+      - m_Target: {fileID: 533888437}
+        m_TargetAssemblyTypeName: dControl0, Assembly-CSharp
         m_MethodName: nexSentence
         m_Mode: 1
         m_Arguments:

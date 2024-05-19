@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerLife : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class playerLife : MonoBehaviour
         currentLife -= dano;
         if(currentLife<=0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

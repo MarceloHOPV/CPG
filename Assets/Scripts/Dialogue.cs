@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
     public string vovoName;
     public string junimName;
     public AudioSource[] music;
+    public playerMovement pm;
 
     public LayerMask playerLayer;
     public float radious;
@@ -28,6 +29,7 @@ public class Dialogue : MonoBehaviour
     private void Start()
     {
         dc = FindAnyObjectByType<Dialogue_Control>();
+        pm = FindAnyObjectByType<playerMovement>();
     }
 
     private void Update()
@@ -96,6 +98,7 @@ public class Dialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            pm.speed = 0;
             onRadious = true;
             music[0].Play();
             // Adicione qualquer outro código que deva ser executado quando o jogador entrar no trigger

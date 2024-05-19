@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     public bool atacando;
 
     [SerializeField] public float move;
-    [SerializeField] private float speed = 10;
+    [SerializeField] public float speed = 10;
     public Rigidbody2D rb;
     public bool isMoving;
 
