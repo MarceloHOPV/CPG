@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] public float speed = 10;
     public Rigidbody2D rb;
     public bool isMoving;
+    public AudioSource[] music;
 
     [SerializeField] public float Jump;
     [SerializeField] private float SpeedJump = 5;
@@ -46,9 +47,12 @@ public class playerMovement : MonoBehaviour
                 if (move == 0)
                 {
                     pa.PlayAnimation("PlayerIdle");
+                    music[1].Stop();
                 }
                 else
                 {
+                    if (!music[1].isPlaying)
+                        music[1].Play();
                     pa.PlayAnimation("PlayerWalk");
                 }
             }
@@ -63,10 +67,15 @@ public class playerMovement : MonoBehaviour
 
     public void playerAtack()
     {
-        if(!atacando)
+        if (!atacando)
+        {
             atacando = true;
+        }
         else
+        {
+            music[2].Play();
             atacando = false;
+        }
     }
     
     void SpriteFlip(float horizontal)
@@ -91,9 +100,15 @@ public class playerMovement : MonoBehaviour
         /*valor teste, trocar por um valor adaptavel*/
         inGround = Physics2D.OverlapCircle(new Vector2(transform.position.x,transform.position.y-0.5f), 0.5f, groundLayer);
         Jump = Input.GetAxis("Jump");
+        
         if(inGround)
         {
             rb.AddForce(new Vector2(0f, Jump*SpeedJump), ForceMode2D.Impulse);
+            if (Jump != 0)
+            {
+                music[1].Stop();
+                music[0].Play();
+            }
         }
 
         if (rb.velocity.y > 0 && !inGround && !atacando)
