@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6084436230961012370}
   - component: {fileID: 5729060931047100760}
   - component: {fileID: 5553972936788786635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Shooter
   m_TagString: Shooter
   m_Icon: {fileID: 0}
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3459504345162830065}
   bullet: {fileID: 3471810981706073825, guid: 4160d20a135aea14794c3f6be427535b, type: 3}
-  timeBetween: 2
-  StartTimeBetween: 2
+  timeBetween: 0
+  StartTimeBetween: 5
   anim: {fileID: 8843712292834462306}
   vida: 4
   beingAttacked: 0
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3459504345162830065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

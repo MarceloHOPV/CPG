@@ -7,6 +7,10 @@ TagManager:
   - chao
   - Enemy
   - Shooter
+  - tree
+  - spawn
+  - BossSpawn
+  - rock
   layers:
   - Default
   - TransparentFX
@@ -15,10 +19,10 @@ TagManager:
   - Water
   - UI
   - chao
-  - 
-  - 
-  - 
-  - 
+  - tree
+  - shooter
+  - enemy
+  - rock
   - 
   - 
   - 
