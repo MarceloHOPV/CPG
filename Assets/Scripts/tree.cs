@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class tree : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class tree : MonoBehaviour
         vida -= dano;
         if(vida <= 0)
         {
-            Debug.Log("Perdeu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
