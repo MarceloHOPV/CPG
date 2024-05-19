@@ -180,6 +180,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e1cf96213b116845b5e2e27e9c4a053, type: 3}
+--- !u!4 &704214163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 620816372639784229, guid: aec135d23445b364d977711c0ea3dfee, type: 3}
+  m_PrefabInstance: {fileID: 967160879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &967160879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac4c29a70b1f50488192a9c946a5500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 704214163}
   timeLerp: 1
   maxYLimit: 0
   minYLimit: 0
@@ -14301,7 +14306,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 89c0f24d2a5713845a61d11c0c6653b8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
