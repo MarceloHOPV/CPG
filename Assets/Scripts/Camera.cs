@@ -18,7 +18,7 @@ public class Camera : MonoBehaviour
         // Mantém a câmera acima do maxYLimit
         if (player.position.y > maxYLimit)
         {
-            newPosition.y = player.position.y + 0.1f; // Adiciona uma pequena folga
+            newPosition.y = player.position.y + 1.1f; // Adiciona uma pequena folga
         }
         // Limita a posição mínima da câmera no eixo Y
         newPosition.y = Mathf.Max(newPosition.y, minYLimit);

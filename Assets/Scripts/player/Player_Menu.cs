@@ -112,8 +112,7 @@ public class Player_Menu : MonoBehaviour
                     f3 = true;
                     music[3].Play();
                 }
-                break;
-                case 4:
+                break;case 4:
                     Debug.Log("4");
                     profile = profileJunin;
                     actorName = juninName;
@@ -125,7 +124,7 @@ public class Player_Menu : MonoBehaviour
                 }
                 break;
                 case 5:
-                    Debug.Log("4");
+                    Debug.Log("5");
                     profile = profileVo;
                     actorName = vovoName;
                 if (!f5)
@@ -136,20 +135,15 @@ public class Player_Menu : MonoBehaviour
                 }
                 break;
                 case 6:
-                    if (!f6)
-                    {
-                        dc.changeCharacter(profile, actorName);
-                        f6 = true;
-                        music[6].Play();
-                    }
-                break;
-                case 7:
-                    if (!f7)
-                    {
-                        dc.changeCharacter(profile, actorName);
-                        f7 = true;
-                        music[7].Play();
-                    }
+                    Debug.Log("6");
+                    profile = profileVo;
+                    actorName = vovoName;
+                if (!f6)
+                {
+                    dc.changeCharacter(profile, actorName);
+                    f6 = true;
+                    music[6].Play();
+                }
                 break;
 
         }

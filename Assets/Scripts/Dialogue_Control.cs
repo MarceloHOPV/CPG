@@ -14,11 +14,16 @@ public class Dialogue_Control : MonoBehaviour
     public Image profileJunin;
     public Text SpeechText;
     public Text actorNameText;
+    public Rigidbody2D rboss;
+    public SpriteRenderer sp;
+    public bool anda = false;
+    public float moveSpeed;
 
     [Header("Setings")]
     public float TypingSpeed;
     private string[] sentences;
     public int index;
+    public float horizontal = 0f;
 
     private void Start()
     {
@@ -38,6 +43,20 @@ public class Dialogue_Control : MonoBehaviour
         sentences = txt;
         actorNameText.text = actorName;
         StartCoroutine(typeSentence());
+    }
+
+    private void FixedUpdate()
+    {
+        if(anda)
+        {
+            if(horizontal < 1.0f)
+            {
+                horizontal += 0.1f;
+            }
+            Vector2 position = rboss.transform.position;
+            position.x += moveSpeed * horizontal * Time.deltaTime;
+            rboss.transform.position = position;
+        }
     }
 
     public void deactv()
@@ -73,11 +92,23 @@ public class Dialogue_Control : MonoBehaviour
             {
                 SpeechText.text = "";
                 index = 0;
-                dialogueObj.SetActive(false);
-                SceneManager.LoadScene(1);
+                //dialogueObj.SetActive(false);
+                sp.flipX = true;
+                StartCoroutine(WaitAndExecute(15));
+                anda = true;
             }
         }
     }
+
+    IEnumerator WaitAndExecute(float delayInSeconds)
+    {
+        // Aguarda o tempo especificado em segundos
+        yield return new WaitForSeconds(delayInSeconds);
+
+        // Código para executar após a espera
+        Debug.Log("Executado após " + delayInSeconds + " segundos.");
+    }
+
     public void preSentence()
     {
         Debug.Log("NextSentece");

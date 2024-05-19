@@ -26,6 +26,10 @@ public class Shooter : MonoBehaviour
 
     //sinaliza que esta destruido
     private bool destroyed = false;
+    public Sprite sp;
+
+    public bool stopAttack = false;
+
 
     void Start()
     {
